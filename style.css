@@ -1,8 +1,8 @@
 body {
   margin: 0;
   font-family: 'Inter', sans-serif;
-  background-color: #fff;
-  color: #1a1a1a;
+  background-color: #000;
+  color: #fff;
 }
 
 .container {
@@ -30,8 +30,9 @@ nav {
 nav a {
   margin-right: 1rem;
   text-decoration: none;
-  color: #ccc;
+  color: #0af;
   font-weight: 600;
+  font-size: 0.95rem; /* reduce tamaño */
 }
 
 nav a:hover {
@@ -39,18 +40,24 @@ nav a:hover {
 }
 
 .hero {
-  background-color: #f4f4f4;
+  background-color: #000;
   text-align: center;
   padding: 4rem 1rem;
 }
 
 .hero h2 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
+  font-size: 2.5rem;
+  font-weight: 800;
+  background: linear-gradient(to right, #00bfff, #ff8c00);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
 }
 
 .hero p {
   font-size: 1.2rem;
+  color: #ccc;
   margin-bottom: 2rem;
 }
 
@@ -58,10 +65,11 @@ nav a:hover {
   display: inline-block;
   padding: 0.75rem 1.5rem;
   background-color: #0af;
-  color: #000;
+  color: #000 !important;
   text-decoration: none;
   border-radius: 4px;
   font-weight: 600;
+  transition: background 0.3s;
 }
 
 .cta:hover {
@@ -120,6 +128,7 @@ footer {
 .dark-theme a {
   color: #0af;
 }
+
 .testimonials {
   background-color: #000;
   padding: 4rem 1rem;
@@ -160,4 +169,31 @@ footer {
   margin-top: 1rem;
   font-weight: 600;
   color: #0af;
+}
+
+.header-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+nav {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.cta-gradient {
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;           /* más pequeño */
+  font-weight: 600;
+  border-radius: 6px;
+  text-decoration: none;
+  background: linear-gradient(to right, #00c6ff, #0072ff);
+  color: #000 !important;      /* texto negro */
+  transition: background 0.3s ease;
+}
+
+.cta-gradient:hover {
+  background: linear-gradient(to right, #00aaff, #0050dd);
 }
