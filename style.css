@@ -12,10 +12,27 @@ body {
 }
 
 header {
-  background-color: #000;
-  border-bottom: 1px solid #222;
-  padding: 1rem 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  padding: 2rem 0;
 }
+
+
+
+
+
+
+
+
+
+
 
 header h1 {
   margin: 0;
@@ -337,11 +354,15 @@ nav {
 }
 
 .impact-highlight {
-  font-size: 1.5rem;
+  font-size: 1.75rem;
   font-weight: bold;
   background: linear-gradient(to right, #00c6ff, #0072ff);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  text-align: right;
+  flex: 0 0 auto;
 }
 
 @keyframes fadeUp {
@@ -381,4 +402,29 @@ nav {
 }
 .impact-item:nth-child(3).visible {
   transition-delay: 0.5s;
+}
+
+
+.impact-item:nth-child(1) .impact-highlight {
+  background: linear-gradient(to right, #00c6ff, #0072ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+.impact-item:nth-child(2) .impact-highlight {
+  background: linear-gradient(to right, #697edc, #cb8ddd);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+.impact-item:nth-child(3) .impact-highlight {
+  background: linear-gradient(to right, #d678ce, #f76b1c);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
 }
