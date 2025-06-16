@@ -12,8 +12,8 @@ body {
 }
 
 header {
-  background-color: #ffffff;
-  border-bottom: 1px solid #eee;
+  background-color: #000;
+  border-bottom: 1px solid #222;
   padding: 1rem 0;
 }
 
@@ -30,8 +30,12 @@ nav {
 nav a {
   margin-right: 1rem;
   text-decoration: none;
-  color: #333;
+  color: #ccc;
   font-weight: 600;
+}
+
+nav a:hover {
+  color: #0af;
 }
 
 .hero {
@@ -53,25 +57,31 @@ nav a {
 .cta {
   display: inline-block;
   padding: 0.75rem 1.5rem;
-  background-color: #1a73e8;
-  color: #fff;
+  background-color: #0af;
+  color: #000;
   text-decoration: none;
   border-radius: 4px;
   font-weight: 600;
 }
 
+.cta:hover {
+  background-color: #08c;
+}
+
 .section {
   padding: 3rem 1rem;
+  background-color: #000;
 }
 
 .section.light {
-  background-color: #f9f9f9;
+  background-color: #111;
 }
 
 .section h2 {
   text-align: center;
   font-size: 1.75rem;
   margin-bottom: 2rem;
+  color: #fff;
 }
 
 .grid {
@@ -81,22 +91,73 @@ nav a {
 }
 
 .card {
-  background-color: #ffffff;
+  background-color: #111;
   padding: 2rem;
-  border: 1px solid #ddd;
+  border: 1px solid #333;
   border-radius: 8px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  color: #fff;
 }
 
 .card h3 {
   margin-top: 0;
   font-size: 1.25rem;
-  color: #1a73e8;
+  color: #0af;
 }
 
 footer {
-  background-color: #1a1a1a;
-  color: #fff;
+  background-color: #000;
+  color: #888;
   text-align: center;
   padding: 1.5rem 1rem;
+}
+
+.dark-theme {
+  background-color: #000;
+  color: #fff;
+}
+
+.dark-theme a {
+  color: #0af;
+}
+.testimonials {
+  background-color: #000;
+  padding: 4rem 1rem;
+  color: #fff;
+}
+
+.testimonials h2 {
+  text-align: center;
+  font-size: 1.75rem;
+  color: #fff;
+  margin-bottom: 2rem;
+}
+
+.testimonial-grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.testimonial {
+  background-color: #111;
+  border: 1px solid #333;
+  padding: 1.5rem;
+  border-radius: 6px;
+  font-style: italic;
+  color: #ccc;
+}
+
+.testimonial::before {
+  content: "“";
+  font-size: 2rem;
+  line-height: 0;
+  vertical-align: top;
+  color: #0af;
+}
+
+.testimonial-author {
+  margin-top: 1rem;
+  font-weight: 600;
+  color: #0af;
 }
