@@ -25,15 +25,6 @@ header {
 }
 
 
-
-
-
-
-
-
-
-
-
 header h1 {
   margin: 0;
   font-size: 1.5rem;
@@ -47,13 +38,13 @@ nav {
 nav a {
   margin-right: 1rem;
   text-decoration: none;
-  color: #0af;
+  color: rgb(214, 209, 209);
   font-weight: 600;
-  font-size: 0.95rem; /* reduce tamaño */
+  font-size: 0.8rem; 
 }
 
 nav a:hover {
-  color: #0af;
+  color: rgb(255, 255, 255);
 }
 
 .hero {
@@ -202,7 +193,7 @@ nav {
 
 .cta-gradient {
   padding: 0.5rem 1rem;
-  font-size: 0.9rem;           /* más pequeño */
+  font-size: 0.9rem;           
   font-weight: 600;
   border-radius: 6px;
   text-decoration: none;
