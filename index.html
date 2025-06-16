@@ -7,7 +7,19 @@
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
 </head>
+
 <body class="dark-theme">
+
+<div class="cookie-banner" id="cookie-banner">
+  <div class="cookie-content">
+    <span>🍪 Utilizamos cookies para mejorar tu experiencia</span>
+    <p>Utilizamos cookies propias y de terceros para analizar el uso del sitio web y mostrarte publicidad relacionada con tus preferencias. <a href="cookies-policy.html" target="_blank" rel="noopener">Más información</a>.</p>
+  </div>
+  <div class="cookie-actions">
+    <button onclick="hideCookieBanner()" class="cookie-btn reject">Rechazar</button>
+    <button onclick="acceptCookies()" class="cookie-btn accept">Aceptar todas</button>
+  </div>
+</div>
 <header>
   <div class="container header-flex">
     <div class="logo">
@@ -108,6 +120,35 @@
     </div>
   </section>
 
+  <section class="section impact-metrics">
+    <div class="container">
+      <h2>¿Qué lograrás con nosotros?</h2>
+      <div class="impact-grid">
+        <div class="impact-item">
+          <div>
+            <h3>80% más confianza</h3>
+            <p>Al practicar con simulacros reales y retroalimentación.</p>
+          </div>
+          <span class="impact-highlight">+80%</span>
+        </div>
+        <div class="impact-item">
+          <div>
+            <h3>3x más entrevistas</h3>
+            <p>Con un CV optimizado y presencia en LinkedIn.</p>
+          </div>
+          <span class="impact-highlight">3x</span>
+        </div>
+        <div class="impact-item">
+          <div>
+            <h3>Mejor primera impresión</h3>
+            <p>Gracias a tu lenguaje corporal, voz y storytelling.</p>
+          </div>
+          <span class="impact-highlight">Top 1°</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section id="nosotros" class="section light">
     <div class="container">
       <h2>¿Quiénes somos?</h2>
@@ -155,5 +196,51 @@
       <p>&copy; 2025 Interview Success Academy. Todos los derechos reservados.</p>
     </div>
   </footer>
+
+
+
+<script>
+  function acceptCookies() {
+    localStorage.setItem('cookies-accepted', 'true');
+    hideCookieBanner();
+  }
+
+  function hideCookieBanner() {
+    document.getElementById('cookie-banner').style.display = 'none';
+  }
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const accepted = localStorage.getItem('cookies-accepted');
+    if (accepted === 'true') {
+      hideCookieBanner();
+    }
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target); // evita que vuelva a ejecutar
+        }
+      });
+    }, {
+      threshold: 0.1
+    });
+
+    document.querySelectorAll('.impact-item').forEach(item => {
+      observer.observe(item);
+    });
+  });
+</script>
+
+
+
+
+
+
+
+
+
+
+
 </body>
 </html>

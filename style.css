@@ -251,3 +251,134 @@ nav {
   box-shadow: 0 8px 20px rgba(0, 170, 255, 0.2);
   transition: all 0.3s ease;
 }
+
+
+.cookie-banner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #111;
+  color: #fff;
+  padding: 1rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  font-size: 0.9rem;
+  z-index: 999;
+  border-top: 1px solid #333;
+}
+
+.cookie-content {
+  max-width: 800px;
+}
+
+.cookie-content a {
+  color: #0af;
+  text-decoration: underline;
+}
+
+.cookie-actions {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 0.5rem;
+}
+
+.cookie-btn {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.cookie-btn.reject {
+  background-color: #000;
+  color: #fff;
+  border: 1px solid #555;
+}
+
+.cookie-btn.accept {
+  background: linear-gradient(to right, #00c6ff, #0072ff);
+  color: #fff;
+}
+
+.impact-metrics {
+  background-color: #000;
+  padding: 4rem 1rem;
+  color: #fff;
+}
+
+.impact-metrics h2 {
+  text-align: center;
+  font-size: 1.75rem;
+  margin-bottom: 2.5rem;
+  color: #fff;
+}
+
+.impact-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+
+.impact-item h3 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.impact-item p {
+  margin: 0;
+  color: #ccc;
+  font-size: 0.95rem;
+}
+
+.impact-highlight {
+  font-size: 1.5rem;
+  font-weight: bold;
+  background: linear-gradient(to right, #00c6ff, #0072ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+
+.impact-item {
+  background-color: #111;
+  border: 1px solid #222;
+  border-radius: 10px;
+  padding: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  transition: transform 0.6s ease, opacity 0.6s ease;
+  opacity: 0;
+  transform: translateY(40px);
+}
+
+.impact-item.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.impact-item:nth-child(1).visible {
+  transition-delay: 0.1s;
+}
+.impact-item:nth-child(2).visible {
+  transition-delay: 0.3s;
+}
+.impact-item:nth-child(3).visible {
+  transition-delay: 0.5s;
+}
