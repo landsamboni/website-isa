@@ -197,3 +197,57 @@ nav {
 .cta-gradient:hover {
   background: linear-gradient(to right, #00aaff, #0050dd);
 }
+
+.icon-wrapper {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.icon-wrapper img {
+  width: 24px;
+  height: 24px;
+  filter: brightness(0) invert(1);
+}
+
+.card ul.service-list {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 1rem;
+}
+
+.card ul.service-list li {
+  margin-bottom: 0.5rem;
+  color: #ccc;
+  font-size: 0.95rem;
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.card ul.service-list li::before {
+  content: "•";
+  color: #0af;
+  position: absolute;
+  left: 0;
+}
+
+.grid.centered-row {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.centered-row {
+  margin-top: 2rem; /* o ajústalo según se vea mejor: 3rem, 4rem... */
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(0, 170, 255, 0.2);
+  transition: all 0.3s ease;
+}
