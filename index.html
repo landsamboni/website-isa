@@ -3,301 +3,363 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Interview Success Academy</title>
+  <meta name="description" content="Interview Xperts Academy - Entrenamiento especializado para entrevistas laborales, mejora de CV y desarrollo de habilidades profesionales en español e inglés." />
+  <meta name="keywords" content="entrevistas laborales, preparación entrevistas, CV profesional, coaching laboral, simulacros entrevistas" />
+  <meta name="author" content="Interview Xperts Academy" />
+  <meta name="robots" content="index, follow" />
+  
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="Interview Xperts Academy - Expertos en Entrevistas Laborales" />
+  <meta property="og:description" content="Entrenamiento personalizado, simulacros reales y práctica en inglés para que brilles en cualquier entrevista." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.interviewxpertsacademy.com" />
+  
+  <title>Interview Xperts Academy - Expertos en Entrevistas Laborales</title>
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
 </head>
 
 <body class="dark-theme">
 
-<div class="cookie-banner" id="cookie-banner">
+<!-- Cookie Banner -->
+<div class="cookie-banner" id="cookie-banner" role="banner" aria-label="Aviso de cookies">
   <div class="cookie-content">
     <span>🍪 Utilizamos cookies para mejorar tu experiencia</span>
-    <p>Utilizamos cookies propias y de terceros para analizar el uso del sitio web y mostrarte publicidad relacionada con tus preferencias. <a href="cookies-policy.html" target="_blank" rel="noopener">Más información</a>.</p>
+    <p>Utilizamos cookies propias y de terceros para analizar el uso del sitio web y mostrarte publicidad relacionada con tus preferencias. <a href="cookies-policy.html" target="_blank" rel="noopener noreferrer">Más información</a>.</p>
   </div>
   <div class="cookie-actions">
-    <button onclick="hideCookieBanner()" class="cookie-btn reject">Rechazar</button>
-    <button onclick="acceptCookies()" class="cookie-btn accept">Aceptar todas</button>
+    <button onclick="hideCookieBanner()" class="cookie-btn reject" aria-label="Rechazar cookies">Rechazar</button>
+    <button onclick="acceptCookies()" class="cookie-btn accept" aria-label="Aceptar todas las cookies">Aceptar todas</button>
   </div>
 </div>
-<header>
+
+<!-- Header -->
+<header role="banner">
   <div class="container header-flex">
     <div class="logo">
-      <h1>Interview Success Academy</h1>
+      <h1>Interview Xperts Academy</h1>
     </div>
-    <nav>
+    <nav role="navigation" aria-label="Navegación principal">
       <a href="#servicios">Servicios</a>
       <a href="#nosotros">Nosotros</a>
       <a href="#contacto">Contacto</a>
     </nav>
     <div>
-      <a class="cta-gradient tall" href="#contacto">Solicitar información</a>
+      <a class="cta-gradient tall" href="#contacto" aria-label="Solicitar información sobre nuestros servicios">Solicitar información</a>
     </div>
   </div>
 </header>
 
-  <section class="hero">
+<!-- Hero Section -->
+<main>
+  <section class="hero" role="banner">
     <div class="container">
-      <h2>Prepárate para tu próxima entrevista como un profesional.</h2>
-      <p>Entrenamiento personalizado, simulacros reales y práctica en inglés para que brilles en cualquier entrevista.</p>
-      <a class="cta" href="#contacto">Reserva tu sesión</a>
+      <h2>Prepárate para tu próxima entrevista como un eXperto.</h2>
+      <p>Entrenamiento personalizado, simulacros reales y práctica en inglés para que brilles en cualquier entrevista laboral.</p>
+      <a class="cta" href="#contacto" aria-label="Reservar sesión de entrenamiento">Reserva tu sesión</a>
     </div>
   </section>
 
-  <section id="servicios" class="section">
+  <!-- Services Section -->
+  <section id="servicios" class="section" role="main">
     <div class="container">
       <h2>Nuestros Servicios</h2>
       <div class="grid">
-  <div class="card">
-    <div class="icon-wrapper" style="background: linear-gradient(to right, #00c6ff, #0072ff);">
-      <img src="https://www.svgrepo.com/show/498970/user-circle.svg" alt="Icono hoja de vida" />
-    </div>
-    <h3>Asesoría en Hoja de Vida</h3>
-    <p>Mejora profesional de tu perfil laboral:</p>
-    <ul class="service-list">
-      <li>Optimización de CV en español e inglés</li>
-      <li>Aplicaciones internacionales (EE.UU./UE)</li>
-      <li>Revisión de perfil LinkedIn</li>
-      <li>Plantillas editables personalizadas</li>
-    </ul>
-  </div>
-  <div class="card">
-    <div class="icon-wrapper" style="background: linear-gradient(to right, #ff6ec4, #7873f5);">
-      <img src="https://www.svgrepo.com/show/475756/chat-round.svg" alt="Icono entrevista" />
-    </div>
-    <h3>Entrenamiento para Entrevistas</h3>
-    <p>Preparación práctica para entrevistas exigentes:</p>
-    <ul class="service-list">
-      <li>Simulacros en español e inglés</li>
-      <li>Preguntas tipo STAR</li>
-      <li>Entrevistas técnicas y de comportamiento</li>
-      <li>Retroalimentación y grabaciones</li>
-    </ul>
-  </div>
-  <div class="card">
-    <div class="icon-wrapper" style="background: linear-gradient(to right, #ff7e5f, #feb47b);">
-      <img src="https://www.svgrepo.com/show/488307/microphone.svg" alt="Icono comunicación" />
-    </div>
-    <h3>Comunicación y Presencia Profesional</h3>
-    <p>Proyecta seguridad en cualquier contexto:</p>
-    <ul class="service-list">
-      <li>Lenguaje corporal y oratoria</li>
-      <li>Confianza y claridad al hablar</li>
-      <li>Prácticas con guías estructuradas</li>
-      <li>Frases clave efectivas</li>
-    </ul>
-  </div>
-</div> <!-- cierre del primer grid -->
+        <article class="card">
+          <div class="icon-wrapper" style="background: linear-gradient(to right, #00c6ff, #0072ff);">
+            <img src="https://www.svgrepo.com/show/498970/user-circle.svg" alt="Icono hoja de vida" width="24" height="24" />
+          </div>
+          <h3>Asesoría en Hoja de Vida</h3>
+          <p>Mejora profesional de tu perfil laboral:</p>
+          <ul class="service-list">
+            <li>Optimización de CV en español e inglés</li>
+            <li>Aplicaciones internacionales (EE.UU./UE)</li>
+            <li>Revisión de perfil LinkedIn</li>
+            <li>Plantillas editables personalizadas</li>
+          </ul>
+        </article>
+        
+        <article class="card">
+          <div class="icon-wrapper" style="background: linear-gradient(to right, #ff6ec4, #7873f5);">
+            <img src="https://www.svgrepo.com/show/475756/chat-round.svg" alt="Icono entrevista" width="24" height="24" />
+          </div>
+          <h3>Entrenamiento para Entrevistas</h3>
+          <p>Preparación práctica para entrevistas exigentes:</p>
+          <ul class="service-list">
+            <li>Simulacros en español e inglés</li>
+            <li>Preguntas tipo STAR</li>
+            <li>Entrevistas técnicas y de comportamiento</li>
+            <li>Retroalimentación y grabaciones</li>
+          </ul>
+        </article>
+        
+        <article class="card">
+          <div class="icon-wrapper" style="background: linear-gradient(to right, #ff7e5f, #feb47b);">
+            <img src="https://www.svgrepo.com/show/488307/microphone.svg" alt="Icono comunicación" width="24" height="24" />
+          </div>
+          <h3>Comunicación y Presencia Profesional</h3>
+          <p>Proyecta seguridad en cualquier contexto:</p>
+          <ul class="service-list">
+            <li>Lenguaje corporal y oratoria</li>
+            <li>Confianza y claridad al hablar</li>
+            <li>Prácticas con guías estructuradas</li>
+            <li>Frases clave efectivas</li>
+          </ul>
+        </article>
+      </div>
 
-<div class="grid centered-row">
-  <div class="card">
-    <div class="icon-wrapper" style="background: linear-gradient(to right, #a1ffce, #faffd1);">
-      <img src="https://www.svgrepo.com/show/511035/growth-up.svg" alt="Icono plan premium" />
-    </div>
-    <h3>Programas Premium</h3>
-    <p>Planes intensivos combinados:</p>
-    <ul class="service-list">
-      <li>Plan Éxito Total (4 semanas)</li>
-      <li>Plan Profesional Global (6 semanas)</li>
-      <li>Incluye todos los servicios + inglés</li>
-      <li>Seguimiento personalizado</li>
-    </ul>
-  </div>
-  <div class="card">
-    <div class="icon-wrapper" style="background: linear-gradient(to right, #f7971e, #ffd200);">
-      <img src="https://www.svgrepo.com/show/452080/cloud-download.svg" alt="Icono productos digitales" />
-    </div>
-    <h3>Productos Digitales</h3>
-    <p>Herramientas descargables para practicar:</p>
-    <ul class="service-list">
-      <li>Guía “20 errores en entrevistas”</li>
-      <li>Plantillas de CV adaptables</li>
-      <li>Workbook de autoconfianza</li>
-      <li>Mini curso grabado</li>
-    </ul>
-  </div>
-</div>
+      <div class="grid centered-row">
+        <article class="card">
+          <div class="icon-wrapper" style="background: linear-gradient(to right, #a1ffce, #faffd1);">
+            <img src="https://www.svgrepo.com/show/511035/growth-up.svg" alt="Icono plan premium" width="24" height="24" />
+          </div>
+          <h3>Programas Premium</h3>
+          <p>Planes intensivos combinados:</p>
+          <ul class="service-list">
+            <li>Plan Éxito Total (4 semanas)</li>
+            <li>Plan Profesional Global (6 semanas)</li>
+            <li>Incluye todos los servicios + inglés</li>
+            <li>Seguimiento personalizado</li>
+          </ul>
+        </article>
+        
+        <article class="card">
+          <div class="icon-wrapper" style="background: linear-gradient(to right, #f7971e, #ffd200);">
+            <img src="https://www.svgrepo.com/show/452080/cloud-download.svg" alt="Icono productos digitales" width="24" height="24" />
+          </div>
+          <h3>Productos Digitales</h3>
+          <p>Herramientas descargables para practicar:</p>
+          <ul class="service-list">
+            <li>Guía "20 errores en entrevistas"</li>
+            <li>Plantillas de CV adaptables</li>
+            <li>Workbook de autoconfianza</li>
+            <li>Mini curso grabado</li>
+          </ul>
+        </article>
+      </div>
     </div>
   </section>
 
-  <section class="section impact-metrics">
+  <!-- Impact Metrics Section -->
+  <section class="section impact-metrics" role="complementary">
     <div class="container">
       <h2>¿Qué lograrás con nosotros?</h2>
       <div class="impact-grid">
-        <div class="impact-item">
+        <article class="impact-item">
           <div>
             <h3>80% más confianza</h3>
-            <p>Al practicar con simulacros reales y retroalimentación.</p>
+            <p>Al practicar con simulacros reales y retroalimentación personalizada.</p>
           </div>
           <span class="impact-highlight">+80%</span>
-        </div>
-        <div class="impact-item">
+        </article>
+        
+        <article class="impact-item">
           <div>
             <h3>3x más entrevistas</h3>
-            <p>Con un CV optimizado y presencia en LinkedIn.</p>
+            <p>Con un CV optimizado y presencia profesional en LinkedIn.</p>
           </div>
           <span class="impact-highlight">3x</span>
-        </div>
-        <div class="impact-item">
+        </article>
+        
+        <article class="impact-item">
           <div>
             <h3>Mejor primera impresión</h3>
-            <p>Gracias a tu lenguaje corporal, voz y storytelling.</p>
+            <p>Gracias a tu lenguaje corporal, voz y storytelling efectivo.</p>
           </div>
           <span class="impact-highlight">Top 1°</span>
-        </div>
+        </article>
       </div>
     </div>
   </section>
 
-
-  
-
-  <section id="nosotros" class="section light">
-        <div class="container">
+  <!-- About Section -->
+  <section id="nosotros" class="section light" role="complementary">
+    <div class="container">
       <h2>¿Quiénes somos?</h2>
       <div class="about-content">
-        <p class="highlight">En Interview Success Academy ayudamos a transformar vidas a través del dominio de las entrevistas laborales.</p>
+        <p class="highlight">En Interview Xperts Academy ayudamos a transformar vidas a través del dominio de las entrevistas laborales y el desarrollo profesional.</p>
         <div class="about-grid">
-          <div>
+          <article>
             <h3>✔ Experiencia real</h3>
             <p>Conocimiento práctico de procesos de selección en EE.UU., Europa y LATAM.</p>
-          </div>
-          <div>
+          </article>
+          <article>
             <h3>✔ Acompañamiento humano</h3>
-            <p>Coaches cercanos, honestos y empáticos que se adaptan a tu realidad.</p>
-          </div>
-          <div>
+            <p>Coaches cercanos, honestos y empáticos que se adaptan a tu realidad profesional.</p>
+          </article>
+          <article>
             <h3>✔ Resultados comprobables</h3>
-            <p>Clientes contratados en empresas como Amazon, Oracle, startups y ONGs.</p>
-          </div>
-          <div>
+            <p>Clientes contratados en empresas como Amazon, Oracle, startups y ONGs internacionales.</p>
+          </article>
+          <article>
             <h3>✔ Enfoque estructurado</h3>
-            <p>Simulacros, plantillas, guías prácticas y seguimiento personalizado.</p>
-          </div>
+            <p>Simulacros, plantillas, guías prácticas y seguimiento personalizado paso a paso.</p>
+          </article>
         </div>
       </div>
     </div>
   </section>
 
-
-
-
-  <section id="contacto" class="section">
+  <!-- Contact Section -->
+  <section id="contacto" class="section" role="main">
     <div class="container contact-section">
       <div class="contact-info">
         <h2>Inicia tu transformación hoy mismo</h2>
-        <p>Programas personalizados para capacitarte en entrevistas y habilidades profesionales.</p>
-        <p class="contact-email">📩 <a href="mailto:contacto@interviewsuccessacademy.com">contacto@interviewsuccessacademy.com</a></p>
+        <p>Programas personalizados para capacitarte en entrevistas y habilidades profesionales con Interview Xperts Academy.</p>
+        <p class="contact-email">📩 <a href="mailto:contacto@interviewxpertsacademy.com">contacto@interviewxpertsacademy.com</a></p>
         <div class="social-icons">
-          <a href="#"><img src="youtube-icon.svg" alt="YouTube" /></a>
-          <a href="#"><img src="linkedin-icon.svg" alt="LinkedIn" /></a>
+          <a href="#" aria-label="Síguenos en YouTube" target="_blank" rel="noopener noreferrer">
+            <img src="youtube-icon.svg" alt="YouTube" width="24" height="24" />
+          </a>
+          <a href="#" aria-label="Conéctate con nosotros en LinkedIn" target="_blank" rel="noopener noreferrer">
+            <img src="linkedin-icon.svg" alt="LinkedIn" width="24" height="24" />
+          </a>
         </div>
       </div>
 
+      <form class="contact-form" method="POST" action="#" novalidate>
+        <h3>Solicita información</h3>
+        <p>Completa el formulario y te contactaremos para diseñar un programa personalizado que se adapte a tus objetivos profesionales.</p>
 
+        <label for="nombre">Nombre *</label>
+        <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required aria-required="true" />
 
+        <label for="apellidos">Apellidos *</label>
+        <input type="text" id="apellidos" name="apellidos" placeholder="Tus apellidos" required aria-required="true" />
 
-  <form class="contact-form">
-  <h3>Solicita información</h3>
-  <p>Completa el formulario y te contactaremos para diseñar un programa personalizado para tu empresa.</p>
+        <label for="email">Email *</label>
+        <input type="email" id="email" name="email" placeholder="tu@empresa.com" required aria-required="true" />
 
-  <label>Nombre</label>
-  <input type="text" placeholder="Tu nombre" />
+        <label for="mensaje">Mensaje *</label>
+        <textarea id="mensaje" name="mensaje" placeholder="Cuéntanos sobre ti y las metas que tienes para mejorar en tus entrevistas laborales..." required aria-required="true"></textarea>
 
-  <label>Apellidos</label>
-  <input type="text" placeholder="Tus apellidos" />
+        <div class="checkbox-row">
+          <label>
+            <input type="checkbox" name="privacy" required aria-required="true" />
+            <span class="checkbox-text">
+              He leído y acepto la <a href="#" target="_blank" rel="noopener noreferrer">política de privacidad</a> y el tratamiento de mis datos personales conforme a la LOPD/RGPD. *
+            </span>
+          </label>
+        </div>
 
-  <label>Email</label>
-  <input type="email" placeholder="tu@empresa.com" />
-
-  <label>Mensaje</label>
-  <textarea placeholder="Cuéntanos sobre ti y las metas que tienes para mejorar en tus entrevistas laborales..."></textarea>
-
-  
-
-  <div class="checkbox-row">
-  <label>
-    <input type="checkbox" required />
-    <span class="checkbox-text">
-      He leído y acepto la <a href="#">política de privacidad</a> y el tratamiento de mis datos personales conforme a la LOPD/RGPD.
-    </span>
-  </label>
-</div>
-
-
-  <button type="submit" class="cta">Enviar solicitud</button>
-  <p class="disclaimer">
-    Al enviar este formulario, confirmas que has leído y aceptado nuestra política de privacidad y el tratamiento de tus datos conforme a la normativa vigente.
-  </p>
-</form>
-
-
+        <button type="submit" class="cta" aria-label="Enviar solicitud de información">Enviar solicitud</button>
+        <p class="disclaimer">
+          Al enviar este formulario, confirmas que has leído y aceptado nuestra política de privacidad y el tratamiento de tus datos conforme a la normativa vigente.
+        </p>
+      </form>
     </div>
   </section>
 
-  <section class="testimonials">
+  <!-- Testimonials Section -->
+  <section class="testimonials" role="complementary">
     <div class="container">
-      <h2>Testimonios</h2>
+      <h2>Testimonios de nuestros eXpertos</h2>
       <div class="testimonial-grid">
-        <div class="testimonial">
-          “Gracias a Interview Success Academy aprendí a comunicarme con seguridad. Logré mi empleo ideal en menos de un mes.”
+        <article class="testimonial">
+          <blockquote>
+            "Gracias a Interview Xperts Academy aprendí a comunicarme con seguridad y proyectar confianza. Logré mi empleo ideal en menos de un mes."
+          </blockquote>
           <div class="testimonial-author">— Laura G.</div>
-        </div>
-        <div class="testimonial">
-          “Me ayudaron a prepararme para entrevistas técnicas en inglés. Hoy trabajo en una empresa internacional.”
+        </article>
+        
+        <article class="testimonial">
+          <blockquote>
+            "Me ayudaron a prepararme para entrevistas técnicas en inglés con simulacros reales. Hoy trabajo en una empresa internacional."
+          </blockquote>
           <div class="testimonial-author">— Andrés V.</div>
-        </div>
-        <div class="testimonial">
-          “La asesoría para mi hoja de vida y LinkedIn marcó la diferencia. ¡100% recomendado!”
+        </article>
+        
+        <article class="testimonial">
+          <blockquote>
+            "La asesoría para mi hoja de vida y optimización de LinkedIn marcó la diferencia en mi búsqueda laboral. ¡100% recomendado!"
+          </blockquote>
           <div class="testimonial-author">— Camilo R.</div>
-        </div>
+        </article>
       </div>
     </div>
   </section>
+</main>
 
-  <footer>
-    <div class="container">
-      <p>&copy; 2025 Interview Success Academy. Todos los derechos reservados.</p>
-    </div>
-  </footer>
+<!-- Footer -->
+<footer role="contentinfo">
+  <div class="container">
+    <p>&copy; 2025 Interview Xperts Academy. Todos los derechos reservados.</p>
+  </div>
+</footer>
 
-
-
+<!-- JavaScript -->
 <script>
+  // Cookie management functions
   function acceptCookies() {
     localStorage.setItem('cookies-accepted', 'true');
     hideCookieBanner();
   }
 
   function hideCookieBanner() {
-    document.getElementById('cookie-banner').style.display = 'none';
+    const banner = document.getElementById('cookie-banner');
+    if (banner) {
+      banner.style.display = 'none';
+    }
   }
 
-  document.addEventListener('DOMContentLoaded', () => {
+  // Initialize page functionality
+  document.addEventListener('DOMContentLoaded', function() {
+    // Check cookie acceptance
     const accepted = localStorage.getItem('cookies-accepted');
     if (accepted === 'true') {
       hideCookieBanner();
     }
 
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
+    // Intersection Observer for impact metrics animation
+    const observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
         if (entry.isIntersecting) {
           entry.target.classList.add('visible');
-          observer.unobserve(entry.target); // evita que vuelva a ejecutar
+          observer.unobserve(entry.target);
         }
       });
     }, {
-      threshold: 0.1
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
     });
 
-    document.querySelectorAll('.impact-item').forEach(item => {
+    // Observe impact items
+    document.querySelectorAll('.impact-item').forEach(function(item) {
       observer.observe(item);
     });
+
+    // Form validation enhancement
+    const form = document.querySelector('.contact-form');
+    if (form) {
+      form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        // Basic form validation
+        const requiredFields = form.querySelectorAll('[required]');
+        let isValid = true;
+        
+        requiredFields.forEach(function(field) {
+          if (!field.value.trim()) {
+            isValid = false;
+            field.style.borderColor = '#ff4444';
+          } else {
+            field.style.borderColor = '#333';
+          }
+        });
+        
+        if (isValid) {
+          // Here you would normally submit the form
+          alert('¡Gracias por tu interés! Te contactaremos pronto.');
+        } else {
+          alert('Por favor, completa todos los campos requeridos.');
+        }
+      });
+    }
   });
 </script>
-
-
-
 
 </body>
 </html>

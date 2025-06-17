@@ -88,7 +88,22 @@ nav a:hover {
 .hero {
   background-color: #000;
   text-align: center;
-  padding: 4rem 1rem;
+  padding: 6rem 1rem;
+  margin-top: 2rem;
+}
+
+/* En móviles, menos espacio */
+@media (max-width: 768px) {
+  .hero {
+    padding: 5rem 1rem 3rem 1rem;
+  }
+}
+
+/* En pantallas muy pequeñas */
+@media (max-width: 480px) {
+  .hero {
+    padding: 4.5rem 1rem 2rem 1rem;
+  }
 }
 
 /* Hero title with gradient text effect */
