@@ -748,6 +748,35 @@ nav a:hover::after {
   margin-top: 0.5rem;
 }
 
+@media (max-width: 768px) {
+  .contact-form {
+    max-width: 100%; /* Usar todo el ancho disponible */
+    padding: 1.5rem;
+    margin-top: 2rem;
+  }
+  
+  .contact-section {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .contact-info {
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-form {
+    padding: 1rem;
+  }
+  
+  .contact-form input,
+  .contact-form textarea {
+    font-size: 16px; /* Evita zoom en iOS */
+  }
+}
+
+
 /* ========================================
    COOKIE BANNER
    ======================================== */
@@ -812,6 +841,34 @@ nav a:hover::after {
 .cookie-btn.accept:hover {
   background: linear-gradient(to right, #00aaff, #0050dd);
 }
+
+@media (max-width: 768px) {
+  .cookie-banner {
+    flex-direction: column;
+    padding: 1rem;
+    text-align: center;
+  }
+  
+  .cookie-content {
+    margin-bottom: 1rem;
+  }
+  
+  .cookie-content p {
+    font-size: 0.8rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .cookie-actions {
+    justify-content: center;
+    margin-top: 0;
+  }
+  
+  .cookie-btn {
+    font-size: 0.8rem;
+    padding: 0.4rem 0.8rem;
+  }
+}
+
 
 /* ========================================
    FOOTER
@@ -916,5 +973,71 @@ footer {
     order: 1; /* CTA primero */
     font-size: 0.85rem;
     padding: 0.5rem 1rem;
+  }
+}
+
+
+
+/* Optimizaciones de rendimiento */
+* {
+  box-sizing: border-box;
+}
+
+img, svg {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Reducir animaciones en móviles */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+  
+  .section h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .section {
+    padding: 2rem 1rem;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr; /* Una columna en móviles */
+    gap: 1.5rem;
+  }
+  
+  .grid.centered-row {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .card {
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    padding: 1rem;
+  }
+  
+  .card h3 {
+    font-size: 1.1rem;
   }
 }
