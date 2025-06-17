@@ -32,6 +32,7 @@ body {
    ======================================== */
 
 /* Fixed header with glassmorphism effect */
+/* Fixed header with glassmorphism effect */
 header {
   position: fixed;
   top: 0;
@@ -41,14 +42,28 @@ header {
   background-color: rgba(0, 0, 0, 0.6);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
   padding: 2rem 0;
+  position: relative;
 }
+
+/* Línea horizontal con gradiente */
+header::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  height: 1px;
+  background: linear-gradient(to right, transparent, #0af, transparent);
+}
+
+
 
 /* Header logo/title */
 header h1 {
   margin: 0;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-weight: 800;
 }
 
@@ -68,17 +83,45 @@ nav {
 }
 
 /* Navigation links */
-nav a {
+
+header nav a,
+.header-flex nav a {
   text-decoration: none;
-  color: #d6d1d1;
+  color: #a1a1a1 !important; /* Fuerza el color */
   font-weight: 600;
-  font-size: 0.8rem;
-  transition: color 0.3s ease; /* Added smooth transition */
+  font-size: 0.85rem;
+  transition: all 0.3s ease;
+  padding: 0.5rem 0.75rem;
+  border-radius: 4px;
+  position: relative;
 }
 
-nav a:hover {
-  color: #fff;
+
+/* Hover con mayor especificidad */
+header nav a:hover,
+.header-flex nav a:hover {
+  color: #ffffff !important;
+  
 }
+
+
+/* Underline effect on hover */
+nav a::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background-color: rgb(255, 255, 255);
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+nav a:hover::after {
+  width: 80%;
+}
+
 
 /* ========================================
    HERO SECTION
