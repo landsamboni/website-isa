@@ -1,16 +1,37 @@
+/* ========================================
+   GLOBAL STYLES & RESET
+   ======================================== */
+
 body {
   margin: 0;
   font-family: 'Inter', sans-serif;
   background-color: #000;
   color: #fff;
+  line-height: 1.6; /* Added for better readability */
 }
 
+/* Main container for content centering */
 .container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 1rem;
 }
 
+/* Dark theme utility class */
+.dark-theme {
+  background-color: #000;
+  color: #fff;
+}
+
+.dark-theme a {
+  color: #0af;
+}
+
+/* ========================================
+   HEADER & NAVIGATION
+   ======================================== */
+
+/* Fixed header with glassmorphism effect */
 header {
   position: fixed;
   top: 0;
@@ -24,35 +45,53 @@ header {
   padding: 2rem 0;
 }
 
-
+/* Header logo/title */
 header h1 {
   margin: 0;
   font-size: 1.5rem;
   font-weight: 800;
 }
 
+/* Header flex layout for responsive design */
+.header-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+/* Navigation container */
 nav {
+  display: flex;
+  gap: 1.5rem;
   margin-top: 0.5rem;
 }
 
+/* Navigation links */
 nav a {
-  margin-right: 1rem;
   text-decoration: none;
-  color: rgb(214, 209, 209);
+  color: #d6d1d1;
   font-weight: 600;
-  font-size: 0.8rem; 
+  font-size: 0.8rem;
+  transition: color 0.3s ease; /* Added smooth transition */
 }
 
 nav a:hover {
-  color: rgb(255, 255, 255);
+  color: #fff;
 }
 
+/* ========================================
+   HERO SECTION
+   ======================================== */
+
+/* Main hero banner */
 .hero {
   background-color: #000;
   text-align: center;
   padding: 4rem 1rem;
 }
 
+/* Hero title with gradient text effect */
 .hero h2 {
   font-size: 2.5rem;
   font-weight: 800;
@@ -61,14 +100,21 @@ nav a:hover {
   -webkit-text-fill-color: transparent;
   background-clip: text;
   color: transparent;
+  margin-bottom: 1rem; /* Added spacing */
 }
 
+/* Hero subtitle */
 .hero p {
   font-size: 1.2rem;
   color: #ccc;
   margin-bottom: 2rem;
 }
 
+/* ========================================
+   CALL-TO-ACTION BUTTONS
+   ======================================== */
+
+/* Standard CTA button */
 .cta {
   display: inline-block;
   padding: 0.75rem 1.5rem;
@@ -77,22 +123,59 @@ nav a:hover {
   text-decoration: none;
   border-radius: 4px;
   font-weight: 600;
-  transition: background 0.3s;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+  border: none;
 }
 
 .cta:hover {
   background-color: #08c;
 }
 
+/* Gradient CTA button variant */
+.cta-gradient {
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  border-radius: 6px;
+  text-decoration: none;
+  background: linear-gradient(to right, #00c6ff, #0072ff);
+  color: #000 !important;
+  transition: background 0.3s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.cta-gradient:hover {
+  background: linear-gradient(to right, #00aaff, #0050dd);
+}
+
+/* Taller CTA button for special sections */
+.cta-gradient.tall {
+  padding: 0.75rem 1.25rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 8px;
+  background: linear-gradient(to right, #00c6ff, #0072ff);
+  color: #000 !important;
+}
+
+/* ========================================
+   LAYOUT SECTIONS
+   ======================================== */
+
+/* Generic section container */
 .section {
   padding: 3rem 1rem;
   background-color: #000;
 }
 
+/* Light variant section */
 .section.light {
   background-color: #111;
 }
 
+/* Section headings */
 .section h2 {
   text-align: center;
   font-size: 1.75rem;
@@ -100,112 +183,57 @@ nav a:hover {
   color: #fff;
 }
 
+/* ========================================
+   GRID LAYOUTS & CARDS
+   ======================================== */
+
+/* Responsive grid system */
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 2rem;
 }
 
+/* Centered grid variant */
+.grid.centered-row {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.centered-row {
+  margin-top: 2rem;
+}
+
+/* Card component with hover effects */
 .card {
   background-color: #111;
   padding: 2rem;
   border: 1px solid #333;
   border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
   color: #fff;
+  transition: all 0.3s ease;
 }
 
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(0, 170, 255, 0.2);
+}
+
+/* Card headings */
 .card h3 {
   margin-top: 0;
   font-size: 1.25rem;
   color: #0af;
 }
 
-footer {
-  background-color: #000;
-  color: #888;
-  text-align: center;
-  padding: 1.5rem 1rem;
-}
+/* ========================================
+   ICON & SERVICE COMPONENTS
+   ======================================== */
 
-.dark-theme {
-  background-color: #000;
-  color: #fff;
-}
-
-.dark-theme a {
-  color: #0af;
-}
-
-.testimonials {
-  background-color: #000;
-  padding: 4rem 1rem;
-  color: #fff;
-}
-
-.testimonials h2 {
-  text-align: center;
-  font-size: 1.75rem;
-  color: #fff;
-  margin-bottom: 2rem;
-}
-
-.testimonial-grid {
-  display: grid;
-  gap: 2rem;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-}
-
-.testimonial {
-  background-color: #111;
-  border: 1px solid #333;
-  padding: 1.5rem;
-  border-radius: 6px;
-  font-style: italic;
-  color: #ccc;
-}
-
-.testimonial::before {
-  content: "“";
-  font-size: 2rem;
-  line-height: 0;
-  vertical-align: top;
-  color: #0af;
-}
-
-.testimonial-author {
-  margin-top: 1rem;
-  font-weight: 600;
-  color: #0af;
-}
-
-.header-flex {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
-
-nav {
-  display: flex;
-  gap: 1.5rem;
-}
-
-.cta-gradient {
-  padding: 0.5rem 1rem;
-  font-size: 0.9rem;           
-  font-weight: 600;
-  border-radius: 6px;
-  text-decoration: none;
-  background: linear-gradient(to right, #00c6ff, #0072ff);
-  color: #000 !important;      /* texto negro */
-  transition: background 0.3s ease;
-}
-
-.cta-gradient:hover {
-  background: linear-gradient(to right, #00aaff, #0050dd);
-}
-
+/* Icon wrapper for service cards */
 .icon-wrapper {
   width: 48px;
   height: 48px;
@@ -214,6 +242,7 @@ nav {
   align-items: center;
   justify-content: center;
   margin-bottom: 1rem;
+  background-color: rgba(0, 170, 255, 0.1); /* Added background */
 }
 
 .icon-wrapper img {
@@ -222,6 +251,7 @@ nav {
   filter: brightness(0) invert(1);
 }
 
+/* Custom service list styling */
 .card ul.service-list {
   list-style: none;
   padding-left: 0;
@@ -243,24 +273,381 @@ nav {
   left: 0;
 }
 
-.grid.centered-row {
-  display: flex;
-  justify-content: center;
+/* ========================================
+   TESTIMONIALS SECTION
+   ======================================== */
+
+/* Testimonials container */
+.testimonials {
+  background-color: #000;
+  padding: 4rem 1rem;
+  color: #fff;
+}
+
+.testimonials h2 {
+  text-align: center;
+  font-size: 1.75rem;
+  color: #fff;
+  margin-bottom: 2rem;
+}
+
+/* Testimonials grid layout */
+.testimonial-grid {
+  display: grid;
   gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+/* Individual testimonial card */
+.testimonial {
+  background-color: #111;
+  border: 1px solid #333;
+  padding: 1.5rem;
+  border-radius: 6px;
+  font-style: italic;
+  color: #ccc;
+  position: relative;
+}
+
+/* Quote mark styling */
+.testimonial::before {
+  font-size: 2rem;
+  line-height: 0;
+  vertical-align: top;
+  color: #0af;
+  position: absolute;
+  top: 0.5rem;
+  left: 1rem;
+}
+
+
+
+/* Testimonial author styling */
+.testimonial-author {
+  margin-top: 1rem;
+  font-weight: 600;
+  color: #0af;
+  font-style: normal;
+}
+
+/* ========================================
+   IMPACT METRICS SECTION
+   ======================================== */
+
+/* Impact metrics container */
+.impact-metrics {
+  background-color: #000;
+  padding: 4rem 1rem;
+  color: #fff;
+}
+
+.impact-metrics h2 {
+  text-align: center;
+  font-size: 1.75rem;
+  margin-bottom: 2.5rem;
+  color: #fff;
+}
+
+/* Impact grid layout */
+.impact-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Individual impact item with animation */
+.impact-item {
+  background-color: #111;
+  border: 1px solid #222;
+  border-radius: 10px;
+  padding: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   flex-wrap: wrap;
+  gap: 1rem;
+  transition: transform 0.6s ease, opacity 0.6s ease;
+  opacity: 0;
+  transform: translateY(40px);
 }
 
-.centered-row {
-  margin-top: 2rem; /* o ajústalo según se vea mejor: 3rem, 4rem... */
+.impact-item.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
-.card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 8px 20px rgba(0, 170, 255, 0.2);
-  transition: all 0.3s ease;
+/* Staggered animation delays */
+.impact-item:nth-child(1).visible {
+  transition-delay: 0.1s;
 }
 
+.impact-item:nth-child(2).visible {
+  transition-delay: 0.3s;
+}
 
+.impact-item:nth-child(3).visible {
+  transition-delay: 0.5s;
+}
+
+/* Impact item content */
+.impact-item h3 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.impact-item p {
+  margin: 0;
+  color: #ccc;
+  font-size: 0.95rem;
+}
+
+/* Highlighted numbers with gradients */
+.impact-highlight {
+  font-size: 1.75rem;
+  font-weight: bold;
+  text-align: right;
+  flex: 0 0 auto;
+}
+
+/* Different gradient colors for each impact item */
+.impact-item:nth-child(1) .impact-highlight {
+  background: linear-gradient(to right, #00c6ff, #0072ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+.impact-item:nth-child(2) .impact-highlight {
+  background: linear-gradient(to right, #697edc, #cb8ddd);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+.impact-item:nth-child(3) .impact-highlight {
+  background: linear-gradient(to right, #d678ce, #f76b1c);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+/* ========================================
+   ABOUT SECTION
+   ======================================== */
+
+/* About section content wrapper */
+.about-content {
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.about-content .highlight {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  color: #ccc;
+}
+
+/* About grid layout */
+.about-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+  text-align: left;
+}
+
+.about-grid h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  color: #0af;
+}
+
+.about-grid p {
+  font-size: 0.95rem;
+  color: #ccc;
+}
+
+/* ========================================
+   CONTACT SECTION
+   ======================================== */
+
+/* Contact section grid layout */
+.contact-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: flex-start;
+  margin-top: 2rem;
+}
+
+/* Contact information styling */
+.contact-info h2 {
+  font-size: 1.75rem;
+  color: #0af;
+  margin-bottom: 1rem;
+}
+
+.contact-info p {
+  color: #ccc;
+  margin-bottom: 1rem;
+}
+
+.contact-email a {
+  color: #0af;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+/* Social media icons */
+.social-icons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.social-icons img {
+  width: 24px;
+  height: 24px;
+  filter: brightness(0) invert(1);
+  transition: transform 0.3s ease;
+}
+
+.social-icons img:hover {
+  transform: scale(1.1);
+}
+
+/* ========================================
+   CONTACT FORM
+   ======================================== */
+
+/* Main form container */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background-color: #111;
+  padding: 3rem;
+  border-radius: 12px;
+  border: 1px solid #333;
+  max-width: 500px;
+  text-align: left;
+}
+
+.contact-form h3 {
+  font-size: 1.5rem;
+  color: #fff;
+  margin-bottom: 0.5rem;
+}
+
+.contact-form p {
+  font-size: 0.95rem;
+  color: #ccc;
+  margin-bottom: 0.5rem;
+}
+
+/* Form labels (excluding checkbox labels) */
+.contact-form label:not(.checkbox-row label) {
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: #ddd;
+}
+
+/* Form inputs and textarea */
+.contact-form input,
+.contact-form textarea {
+  background-color: #2b384f;
+  color: #fff;
+  border: 1px solid #333;
+  border-radius: 6px;
+  padding: 0.75rem;
+  font-family: inherit;
+  font-size: 0.95rem;
+  width: 100%;
+  transition: border-color 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: #0af;
+}
+
+.contact-form textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+/* Checkbox styling */
+.checkbox-row {
+  margin: 1rem 0;
+  width: 100%;
+}
+
+.checkbox-row label {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  font-size: 0.9rem;
+  color: #ccc;
+  line-height: 1.5;
+  font-weight: normal;
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+}
+
+.checkbox-row input[type="checkbox"] {
+  flex-shrink: 0;
+  width: 16px;
+  height: 16px;
+  margin: 0;
+  margin-top: 0.1rem;
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.checkbox-row .checkbox-text {
+  flex: 1;
+  text-align: left;
+}
+
+.checkbox-row a {
+  color: #0af;
+  text-decoration: underline;
+}
+
+/* Form submit button */
+.contact-form button.cta {
+  margin-top: 0.5rem;
+  background-color: #0af;
+  color: #000 !important;
+  font-weight: bold;
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.contact-form button.cta:hover {
+  background-color: #4dc3f7;
+}
+
+.contact-form .disclaimer {
+  font-size: 0.8rem;
+  color: #666;
+  margin-top: 0.5rem;
+}
+
+/* ========================================
+   COOKIE BANNER
+   ======================================== */
+
+/* Fixed cookie consent banner */
 .cookie-banner {
   position: fixed;
   bottom: 0;
@@ -299,6 +686,7 @@ nav {
   border-radius: 6px;
   font-weight: 600;
   cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 .cookie-btn.reject {
@@ -307,115 +695,90 @@ nav {
   border: 1px solid #555;
 }
 
+.cookie-btn.reject:hover {
+  background-color: #333;
+}
+
 .cookie-btn.accept {
   background: linear-gradient(to right, #00c6ff, #0072ff);
   color: #fff;
 }
 
-.impact-metrics {
+.cookie-btn.accept:hover {
+  background: linear-gradient(to right, #00aaff, #0050dd);
+}
+
+/* ========================================
+   FOOTER
+   ======================================== */
+
+footer {
   background-color: #000;
-  padding: 4rem 1rem;
-  color: #fff;
-}
-
-.impact-metrics h2 {
+  color: #888;
   text-align: center;
-  font-size: 1.75rem;
-  margin-bottom: 2.5rem;
-  color: #fff;
+  padding: 1.5rem 1rem;
+  border-top: 1px solid #333;
+  font-size: 0.8rem; 
+  line-height: 1.4; /* Mejor espaciado entre líneas */
+  opacity: 0.9; /* Sutil transparencia */
 }
 
-.impact-grid {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-}
-
-
-.impact-item h3 {
-  margin: 0 0 0.5rem 0;
-  font-size: 1.1rem;
-  font-weight: 700;
-}
-
-.impact-item p {
-  margin: 0;
-  color: #ccc;
-  font-size: 0.95rem;
-}
-
-.impact-highlight {
-  font-size: 1.75rem;
-  font-weight: bold;
-  background: linear-gradient(to right, #00c6ff, #0072ff);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  color: transparent;
-  text-align: right;
-  flex: 0 0 auto;
-}
+/* ========================================
+   ANIMATIONS & KEYFRAMES
+   ======================================== */
 
 @keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
   to {
     opacity: 1;
     transform: translateY(0);
   }
 }
 
+/* ========================================
+   RESPONSIVE DESIGN
+   ======================================== */
 
-
-.impact-item {
-  background-color: #111;
-  border: 1px solid #222;
-  border-radius: 10px;
-  padding: 1.5rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 1rem;
-  transition: transform 0.6s ease, opacity 0.6s ease;
-  opacity: 0;
-  transform: translateY(40px);
+@media (max-width: 768px) {
+  .contact-section {
+    grid-template-columns: 1fr;
+  }
+  
+  .hero h2 {
+    font-size: 2rem;
+  }
+  
+  .header-flex {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  nav {
+    margin-top: 0;
+  }
+  
+  .contact-form {
+    padding: 2rem;
+  }
 }
 
-.impact-item.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.impact-item:nth-child(1).visible {
-  transition-delay: 0.1s;
-}
-.impact-item:nth-child(2).visible {
-  transition-delay: 0.3s;
-}
-.impact-item:nth-child(3).visible {
-  transition-delay: 0.5s;
-}
-
-
-.impact-item:nth-child(1) .impact-highlight {
-  background: linear-gradient(to right, #00c6ff, #0072ff);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  color: transparent;
-}
-
-.impact-item:nth-child(2) .impact-highlight {
-  background: linear-gradient(to right, #697edc, #cb8ddd);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  color: transparent;
-}
-
-.impact-item:nth-child(3) .impact-highlight {
-  background: linear-gradient(to right, #d678ce, #f76b1c);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  color: transparent;
+@media (max-width: 480px) {
+  .hero {
+    padding: 2rem 1rem;
+  }
+  
+  .hero h2 {
+    font-size: 1.75rem;
+  }
+  
+  .section {
+    padding: 2rem 1rem;
+  }
+  
+  .card {
+    padding: 1.5rem;
+  }
 }
