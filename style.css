@@ -168,6 +168,36 @@ nav a:hover::after {
   margin-bottom: 2rem;
 }
 
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 3rem 1rem 2rem 1rem; /* Menos padding superior */
+    margin-top: 1rem; /* Reducir margen superior */
+  }
+  
+  .hero h2 {
+    font-size: 1.8rem; /* Título más pequeño */
+    line-height: 1.2;
+    margin-bottom: 1rem;
+  }
+  
+  .hero p {
+    font-size: 1rem; /* Texto más pequeño */
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero h2 {
+    font-size: 1.5rem;
+  }
+  
+  .hero p {
+    font-size: 0.9rem;
+  }
+}
+
+
 /* ========================================
    CALL-TO-ACTION BUTTONS
    ======================================== */
@@ -855,5 +885,36 @@ footer {
   
   .card {
     padding: 1.5rem;
+  }
+}
+
+
+
+/* Mejoras específicas para móviles */
+@media (max-width: 768px) {
+  header {
+    padding: 1rem 0; /* Reducir padding en móviles */
+  }
+  
+  .header-flex {
+    flex-direction: column;
+    gap: 0.5rem; /* Reducir gap */
+    text-align: center;
+  }
+  
+  .logo h1 {
+    font-size: 1rem; /* Título más pequeño */
+    margin-bottom: 0.5rem;
+  }
+  
+  nav {
+    order: 2; /* Navegación después del CTA */
+    margin-top: 0;
+  }
+  
+  .cta-gradient.tall {
+    order: 1; /* CTA primero */
+    font-size: 0.85rem;
+    padding: 0.5rem 1rem;
   }
 }
