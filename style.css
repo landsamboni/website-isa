@@ -524,16 +524,33 @@ nav a:hover {
   margin-top: 1rem;
 }
 
-.social-icons img {
-  width: 24px;
-  height: 24px;
-  filter: brightness(0) invert(1);
-  transition: transform 0.3s ease;
+.social-icons a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  background-color: rgba(0, 170, 255, 0.1);
+  transition: all 0.3s ease;
 }
 
-.social-icons img:hover {
+.social-icons a:hover {
+  background-color: rgba(0, 170, 255, 0.2);
   transform: scale(1.1);
 }
+
+.social-icons svg {
+  width: 24px;
+  height: 24px;
+  color: #0af;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover svg {
+  color: #fff;
+}
+
 
 /* ========================================
    CONTACT FORM
