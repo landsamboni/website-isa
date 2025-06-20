@@ -290,6 +290,12 @@ nav a:hover::after {
   flex-wrap: wrap;
 }
 
+/* Asegurar que las tarjetas en centered-row tengan el mismo tamaño */
+.grid.centered-row .card {
+  flex: 0 1 300px; /* Ancho fijo de 300px, similar a las otras tarjetas */
+  min-height: 280px; /* Altura mínima para consistencia */
+}
+
 .centered-row {
   margin-top: 2rem;
 }
@@ -1024,6 +1030,12 @@ img, svg {
   .grid.centered-row {
     flex-direction: column;
     align-items: center;
+  }
+  
+  .grid.centered-row .card {
+    flex: 1 1 100%; /* En móviles, usar todo el ancho */
+    max-width: 400px; /* Pero con un máximo */
+    min-height: auto; /* Permitir altura automática en móviles */
   }
   
   .card {
