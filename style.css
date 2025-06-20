@@ -959,12 +959,12 @@ img, svg {
 
   /* Header */
   header {
-    padding: 2rem 0;
+    padding: 1rem 0;
   }
 
   .header-flex {
     flex-direction: column;
-    gap: 3rem;
+    gap: 1rem;
     text-align: center;
     padding-top: 1.5rem;
     padding-bottom: 1rem;
@@ -990,6 +990,7 @@ img, svg {
     font-size: 1rem;
     padding: 0.6rem 1.2rem;
     margin-bottom: 1rem;
+    display: none;
   }
 
   /* Contact Section */
