@@ -59,6 +59,17 @@ header::after {
 }
 
 
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Espacio entre el ícono y el texto */
+}
+
+.logo-icon {
+  width: 32px;
+  height: 32px;
+  object-fit: contain; /* Para evitar que se distorsione */
+}
 
 /* Header logo/title */
 header h1 {
