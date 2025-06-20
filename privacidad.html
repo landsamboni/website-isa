@@ -3,43 +3,69 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="robots" content="noindex, nofollow" />
   <title>Política de Privacidad | Interview Xperts Academy</title>
-
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
   <style>
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Inter', sans-serif;
+      background-color: #0d0d0d;
+      color: #ffffff;
       margin: 0;
       padding: 2rem;
-      background-color: #f9f9f9;
-      color: #333;
-      line-height: 1.6;
     }
 
-    header {
-      text-align: center;
-      margin-bottom: 2rem;
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 2rem;
+      line-height: 1.7;
     }
 
     h1 {
       font-size: 2rem;
-      color: #0072ff;
+      margin-bottom: 0.5rem;
+      color: #00bfff;
+      text-align: center;
     }
 
     h2 {
       margin-top: 2rem;
-      color: #444;
+      margin-bottom: 0.5rem;
+      font-size: 1.25rem;
+      color: #00bfff;
     }
 
-    p {
+    p, ul {
       margin-bottom: 1rem;
+      font-size: 1rem;
+    }
+
+    ul {
+      padding-left: 1.2rem;
     }
 
     footer {
       margin-top: 3rem;
       text-align: center;
-      font-size: 0.9rem;
-      color: #777;
+      font-size: 0.85rem;
+      color: #888;
+    }
+
+    a.button {
+      display: inline-block;
+      margin-top: 2rem;
+      background-color: #00bfff;
+      color: #000;
+      text-decoration: none;
+      padding: 0.75rem 1.5rem;
+      border-radius: 5px;
+      font-weight: 600;
+      transition: background 0.3s;
+      text-align: center;
+    }
+
+    a.button:hover {
+      background-color: #009fd1;
     }
 
     @media (max-width: 600px) {
@@ -47,19 +73,25 @@
         padding: 1rem;
       }
 
+      .container {
+        padding: 1rem;
+      }
+
       h1 {
         font-size: 1.5rem;
+      }
+
+      h2 {
+        font-size: 1.1rem;
       }
     }
   </style>
 </head>
 <body>
-  <header>
+  <div class="container">
     <h1>Política de Privacidad</h1>
-    <p>Última actualización: 20 de junio de 2025</p>
-  </header>
+    <p><em>Última actualización: 20 de junio de 2025</em></p>
 
-  <main>
     <p>En Interview Xperts Academy, nos comprometemos a proteger tu privacidad. Esta política explica cómo recopilamos, usamos y protegemos tu información personal cuando visitas nuestro sitio web o utilizas nuestros servicios.</p>
 
     <h2>1. Información que recopilamos</h2>
@@ -89,10 +121,14 @@
 
     <h2>6. Cambios en esta política</h2>
     <p>Nos reservamos el derecho de actualizar esta política de privacidad. Cualquier cambio será publicado en esta página con la fecha de última modificación actualizada.</p>
-  </main>
 
-  <footer>
-    &copy; 2025 Interview Xperts Academy. Todos los derechos reservados.
-  </footer>
+    <div style="text-align: center;">
+      <a class="button" href="https://interviewxpertsacademy.com">Volver al inicio</a>
+    </div>
+
+    <footer>
+      &copy; 2025 Interview Xperts Academy. Todos los derechos reservados.
+    </footer>
+  </div>
 </body>
 </html>
