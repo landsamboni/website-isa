@@ -422,6 +422,7 @@
             if (!field.checked) {
               isValid = false;
               field.style.outline = '2px solid #ff4444';
+              alert('Por favor, acepta la política de privacidad para continuar.');
             } else {
               field.style.outline = 'none';
             }
@@ -435,14 +436,6 @@
             }
           }
         });
-
-        // Validación específica del checkbox de privacidad
-        const privacyCheckbox = form.querySelector('input[name="privacy"]');
-        if (privacyCheckbox && !privacyCheckbox.checked) {
-          isValid = false;
-          privacyCheckbox.style.outline = '2px solid #ff4444';
-          alert('Por favor, acepta la política de privacidad para continuar.');
-        }
 
         // Si hay campos vacíos o checkbox sin marcar, se previene el envío
         if (!isValid) {
@@ -470,6 +463,7 @@
     }
   });
 </script>
+
 
 
 </body>
