@@ -283,6 +283,7 @@ nav a:hover::after {
 }
 
 /* Centered grid variant */
+/* Centered grid variant */
 .grid.centered-row {
   display: flex;
   justify-content: center;
@@ -290,14 +291,19 @@ nav a:hover::after {
   flex-wrap: wrap;
 }
 
-/* Asegurar que las tarjetas en centered-row tengan el mismo tamaño */
+/* Forzar mismo ancho para todas las tarjetas en centered-row */
+.centered-row .card,
 .grid.centered-row .card {
-  flex: 0 1 300px; /* Ancho fijo de 300px, similar a las otras tarjetas */
-  min-height: 280px; /* Altura mínima para consistencia */
+  flex: 0 0 300px !important; /* Ancho fijo de 300px */
+  width: 300px !important;
+  min-height: 280px; /* Altura mínima consistente */
+  max-width: 300px; /* Evitar que se expandan */
 }
 
-.centered-row {
-  margin-top: 2rem;
+/* Asegurar que el grid normal también tenga el mismo ancho */
+.grid:not(.centered-row) .card {
+  min-width: 300px;
+  max-width: 300px;
 }
 
 /* Card component with hover effects */
@@ -1032,10 +1038,12 @@ img, svg {
     align-items: center;
   }
   
-  .grid.centered-row .card {
-    flex: 1 1 100%; /* En móviles, usar todo el ancho */
-    max-width: 400px; /* Pero con un máximo */
-    min-height: auto; /* Permitir altura automática en móviles */
+.grid.centered-row .card,
+  .centered-row .card {
+    flex: 1 1 100% !important;
+    width: 100% !important;
+    max-width: 400px !important;
+    min-height: auto;
   }
   
   .card {
