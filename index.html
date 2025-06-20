@@ -368,75 +368,109 @@
     <!-- =========================
          JavaScript Section (at end to improve page load)
          ========================= -->
-    <script>
-      // Cookie management functions
-      function acceptCookies() {
-        localStorage.setItem('cookies-accepted', 'true');
-        hideCookieBanner();
-      }
+<script>
+  // Cookie management functions
+  function acceptCookies() {
+    localStorage.setItem('cookies-accepted', 'true');
+    hideCookieBanner();
+  }
 
-      function hideCookieBanner() {
-        const banner = document.getElementById('cookie-banner');
-        if (banner) {
-          banner.style.display = 'none';
-        }
-      }
+  function hideCookieBanner() {
+    const banner = document.getElementById('cookie-banner');
+    if (banner) {
+      banner.style.display = 'none';
+    }
+  }
 
-      // Inicialización de funcionalidades de la página
-      document.addEventListener('DOMContentLoaded', function() {
-        // Ocultar banner de cookies si ya se aceptó
-        const accepted = localStorage.getItem('cookies-accepted');
-        if (accepted === 'true') {
-          hideCookieBanner();
-        }
+  // Inicialización de funcionalidades de la página
+  document.addEventListener('DOMContentLoaded', function() {
+    // Ocultar banner de cookies si ya se aceptó
+    const accepted = localStorage.getItem('cookies-accepted');
+    if (accepted === 'true') {
+      hideCookieBanner();
+    }
 
-        // Intersection Observer para animar métricas de impacto
-        const observer = new IntersectionObserver(function(entries) {
-          entries.forEach(function(entry) {
-            if (entry.isIntersecting) {
-              entry.target.classList.add('visible');
-              observer.unobserve(entry.target);
-            }
-          });
-        }, {
-          threshold: 0.1,
-          rootMargin: '0px 0px -50px 0px'
-        });
-
-        // Observar métricas de impacto
-        document.querySelectorAll('.impact-item').forEach(function(item) {
-          observer.observe(item);
-        });
-
-        // Validación de formulario básica (no bloquea el envío si es válido, para permitir a FormSubmit funcionar)
-        const form = document.querySelector('.contact-form');
-        if (form) {
-          form.addEventListener('submit', function(e) {
-            // Validación manual de campos requeridos
-            const requiredFields = form.querySelectorAll('[required]');
-            let isValid = true;
-
-            requiredFields.forEach(function(field) {
-              if (!field.value.trim()) {
-                isValid = false;
-                field.style.borderColor = '#ff4444';
-              } else {
-                field.style.borderColor = '#333';
-              }
-            });
-
-            // Si hay campos vacíos, se previene el envío y se enfoca el primero
-            if (!isValid) {
-              e.preventDefault();
-              // Opcional: enfocar el primer campo inválido
-              const firstInvalid = Array.from(requiredFields).find(field => !field.value.trim());
-              if (firstInvalid) firstInvalid.focus();
-            }
-            // Si es válido, FormSubmit procesa el envío normal (no se previene el submit)
-          });
+    // Intersection Observer para animar métricas de impacto
+    const observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
         }
       });
-    </script>
+    }, {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    });
+
+    // Observar métricas de impacto
+    document.querySelectorAll('.impact-item').forEach(function(item) {
+      observer.observe(item);
+    });
+
+    // Validación de formulario básica (no bloquea el envío si es válido, para permitir a FormSubmit funcionar)
+    const form = document.querySelector('.contact-form');
+    if (form) {
+      form.addEventListener('submit', function(e) {
+        // Validación manual de campos requeridos
+        const requiredFields = form.querySelectorAll('[required]');
+        let isValid = true;
+
+        requiredFields.forEach(function(field) {
+          if (field.type === 'checkbox') {
+            // Validación específica para checkbox
+            if (!field.checked) {
+              isValid = false;
+              field.style.outline = '2px solid #ff4444';
+            } else {
+              field.style.outline = 'none';
+            }
+          } else {
+            // Validación para campos de texto
+            if (!field.value.trim()) {
+              isValid = false;
+              field.style.borderColor = '#ff4444';
+            } else {
+              field.style.borderColor = '#333';
+            }
+          }
+        });
+
+        // Validación específica del checkbox de privacidad
+        const privacyCheckbox = form.querySelector('input[name="privacy"]');
+        if (privacyCheckbox && !privacyCheckbox.checked) {
+          isValid = false;
+          privacyCheckbox.style.outline = '2px solid #ff4444';
+          alert('Por favor, acepta la política de privacidad para continuar.');
+        }
+
+        // Si hay campos vacíos o checkbox sin marcar, se previene el envío
+        if (!isValid) {
+          e.preventDefault();
+          // Opcional: enfocar el primer campo inválido
+          const firstInvalid = Array.from(requiredFields).find(field => {
+            return field.type === 'checkbox' ? !field.checked : !field.value.trim();
+          });
+          if (firstInvalid) firstInvalid.focus();
+        }
+        // Si es válido, FormSubmit procesa el envío normal (no se previene el submit)
+      });
+
+      // Limpiar estilos de error cuando el usuario interactúa con los campos
+      const allFields = form.querySelectorAll('input, textarea');
+      allFields.forEach(function(field) {
+        field.addEventListener('input', function() {
+          if (field.type === 'checkbox') {
+            field.style.outline = 'none';
+          } else {
+            field.style.borderColor = '#333';
+          }
+        });
+      });
+    }
+  });
+</script>
+
 
 </body>
 </html>
